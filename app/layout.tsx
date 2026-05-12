@@ -19,7 +19,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://scoptrades.com"),
+  metadataBase: new URL("https://scopstrades.com"),
   title: {
     default: "ScopTrade - Copy Futures, Options & Contracts with Precision",
     template: "%s | ScopTrade",
@@ -36,14 +36,14 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     type: "website",
-    url: "https://scoptrades.com",
+    url: "https://scopstrades.com",
     siteName: "ScopTrade",
     title: "ScopTrade - Copy Futures, Options & Contracts with Precision",
     description:
       "Mirror real-time stock and options trades from top-performing traders. Precision, flexibility, and transparency straight to your fingertips.",
     images: [
       {
-        url: "https://scoptrades.com/og-image.png",
+        url: "https://scopstrades.com/og-image.png",
         width: 1200,
         height: 630,
         alt: "ScopTrade - Social Copy Trading Platform",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     title: "ScopTrade - Copy Futures, Options & Contracts with Precision",
     description:
       "Mirror real-time stock and options trades from top-performing traders. Precision, flexibility, and transparency straight to your fingertips.",
-    images: ["https://scoptrades.com/og-image.png"],
+    images: ["https://scopstrades.com/og-image.png"],
   },
   icons: {
     icon: [
