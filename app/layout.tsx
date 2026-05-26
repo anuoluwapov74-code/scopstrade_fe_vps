@@ -21,8 +21,8 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://scopstrades.com"),
   title: {
-    default: "ScopTrade - Copy Futures, Options & Contracts with Precision",
-    template: "%s | ScopTrade",
+    default: "ScopsTrades - Copy Futures, Options & Contracts with Precision",
+    template: "%s | ScopsTrades",
   },
   description:
     "Mirror real-time stock and options trades from top-performing traders. Precision, flexibility, and transparency straight to your fingertips.",
@@ -32,13 +32,13 @@ export const metadata: Metadata = {
     "options trading",
     "stock trading",
     "trade copying",
-    "ScopTrade",
+    "ScopsTrades",
   ],
   openGraph: {
     type: "website",
     url: "https://scopstrades.com",
-    siteName: "ScopTrade",
-    title: "ScopTrade - Copy Futures, Options & Contracts with Precision",
+    siteName: "ScopsTrades",
+    title: "ScopsTrades - Copy Futures, Options & Contracts with Precision",
     description:
       "Mirror real-time stock and options trades from top-performing traders. Precision, flexibility, and transparency straight to your fingertips.",
     images: [
@@ -46,13 +46,13 @@ export const metadata: Metadata = {
         url: "https://scopstrades.com/og-image.png",
         width: 1200,
         height: 630,
-        alt: "ScopTrade - Social Copy Trading Platform",
+        alt: "ScopsTrades - Social Copy Trading Platform",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "ScopTrade - Copy Futures, Options & Contracts with Precision",
+    title: "ScopsTrades - Copy Futures, Options & Contracts with Precision",
     description:
       "Mirror real-time stock and options trades from top-performing traders. Precision, flexibility, and transparency straight to your fingertips.",
     images: ["https://scopstrades.com/og-image.png"],
