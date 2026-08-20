@@ -4,7 +4,6 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowLeft, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -119,27 +118,10 @@ export default function ForgotPasswordPage() {
         {/* Logo */}
         <Link
           href="/"
-          className="hidden dark:flex text-2xl md:text-4xl font-extrabold justify-center"
+          className="flex text-2xl md:text-4xl font-extrabold justify-center"
         >
-          <Image
-            alt="logo"
-            src={"/logo_light.png"}
-            className="w-50"
-            width={1000}
-            height={250}
-          />
-        </Link>
-        <Link
-          href="/"
-          className="flex dark:hidden text-2xl md:text-4xl font-extrabold justify-center"
-        >
-          <Image
-            alt="logo"
-            src={"/logo_dark.png"}
-            className="w-50"
-            width={1000}
-            height={250}
-          />
+          <span className="text-gray-900 dark:text-white">Trade</span>
+          <span className="text-blue-600">Scops</span>
         </Link>
 
         <div className="space-y-2">

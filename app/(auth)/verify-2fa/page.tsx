@@ -9,7 +9,6 @@ import { apiFetch } from "@/lib/api";
 import { toast } from "sonner";
 import { PulseLoader } from "react-spinners";
 import Link from "next/link";
-import Image from "next/image";
 import PagePreloader from "@/components/PagePreloader";
 
 function Verify2FAContent() {
@@ -118,20 +117,10 @@ function Verify2FAContent() {
         >
           {/* Logo */}
           <Link href="/" className="inline-block mb-4">
-            <Image
-              src="/logo_dark.png"
-              className="hidden dark:block w-50 mx-auto"
-              alt="Logo"
-              width={1000}
-              height={250}
-            />
-            <Image
-              src="/logo_light.png"
-              className="block dark:hidden w-50 mx-auto"
-              alt="Logo"
-              width={1000}
-              height={250}
-            />
+            <span className="text-2xl md:text-4xl font-extrabold tracking-tight">
+              <span className="text-gray-900 dark:text-white">Trade</span>
+              <span className="text-blue-600">Scops</span>
+            </span>
           </Link>
 
           <div className="w-20 h-20 bg-blue-100 dark:bg-blue-500/20 rounded-full flex items-center justify-center mx-auto">

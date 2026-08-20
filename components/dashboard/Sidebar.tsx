@@ -21,7 +21,6 @@ import {
   ArrowUpFromLine,
 } from "lucide-react";
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 const overviewSection = [
   { name: "Dashboard", href: "/portfolio", icon: Home },
@@ -128,20 +127,9 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
           {/* Header */}
           <div className="flex items-center justify-between p-5 border-b border-gray-200 dark:border-white/10">
             <Link href="/portfolio" className="flex items-center gap-0">
-              <Image
-                src={"/logo_dark.png"}
-                className="block dark:hidden w-40"
-                alt=""
-                width={1000}
-                height={250}
-              />
-              <Image
-                src={"/logo_light.png"}
-                className="hidden dark:block w-40"
-                alt=""
-                width={1000}
-                height={250}
-              />
+              <span className="text-xl sm:text-2xl font-extrabold tracking-tight text-gray-900 dark:text-white">
+                Trade<span className="text-blue-600 dark:text-blue-500">Scops</span>
+              </span>
             </Link>
 
             <button

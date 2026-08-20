@@ -13,7 +13,7 @@ export default function AboutPage() {
           {/* Header */}
           <div className="mb-12">
             <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-              About ScopsTrade
+              About TradeScops
             </h1>
             <p className="text-gray-600 dark:text-gray-400 text-lg">
               Democratizing copy trading for everyone
@@ -28,7 +28,7 @@ export default function AboutPage() {
                 Our Story
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                ScopsTrade was founded with a clear mission: to make
+                TradeScops was founded with a clear mission: to make
                 professional-grade copy trading accessible to everyone. We
                 believe that every investor, regardless of experience level,
                 should have the ability to mirror the strategies of
@@ -38,7 +38,7 @@ export default function AboutPage() {
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                 From our early days, we set out to build a platform that bridges
                 the gap between experienced traders and those looking to learn
-                and grow their portfolios. Today, ScopsTrade serves a global
+                and grow their portfolios. Today, TradeScops serves a global
                 community of traders across futures, options, and contracts.
               </p>
             </section>
@@ -48,7 +48,7 @@ export default function AboutPage() {
               <div className="aspect-video rounded-2xl overflow-hidden">
                 <Image
                   src="/images/about_1.jpg"
-                  alt="ScopsTrade team in discussion"
+                  alt="TradeScops team in discussion"
                   width={600}
                   height={340}
                   className="w-full h-full object-cover"
@@ -57,7 +57,7 @@ export default function AboutPage() {
               <div className="aspect-video rounded-2xl overflow-hidden">
                 <Image
                   src="/images/about_2.jpg"
-                  alt="ScopsTrade annual report presentation"
+                  alt="TradeScops annual report presentation"
                   width={600}
                   height={340}
                   className="w-full h-full object-cover"
@@ -134,7 +134,7 @@ export default function AboutPage() {
                 Our Team
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                Behind ScopsTrade is a diverse team of financial professionals,
+                Behind TradeScops is a diverse team of financial professionals,
                 technologists, and compliance experts united by a shared passion
                 for making copy trading better. Our team brings decades of
                 combined experience in financial services, fintech development,
@@ -147,7 +147,7 @@ export default function AboutPage() {
               <div className="aspect-video rounded-2xl overflow-hidden">
                 <Image
                   src="/images/about_3.jpg"
-                  alt="ScopsTrade team collaborating"
+                  alt="TradeScops team collaborating"
                   width={600}
                   height={340}
                   className="w-full h-full object-cover"
@@ -156,7 +156,7 @@ export default function AboutPage() {
               <div className="aspect-video rounded-2xl overflow-hidden">
                 <Image
                   src="/images/about_4.jpg"
-                  alt="ScopsTrade team meeting"
+                  alt="TradeScops team meeting"
                   width={600}
                   height={340}
                   className="w-full h-full object-cover"
@@ -170,7 +170,7 @@ export default function AboutPage() {
                 Global Presence
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-                ScopsTrade operates under strict regulatory oversight across
+                TradeScops operates under strict regulatory oversight across
                 multiple jurisdictions, ensuring the highest standards of
                 compliance and client protection:
               </p>
@@ -179,7 +179,7 @@ export default function AboutPage() {
                   <span className="font-semibold text-gray-900 dark:text-white">
                     Europe
                   </span>{" "}
-                  &mdash; ScopsTrade (Europe) Ltd., authorised and regulated by
+                  &mdash; TradeScops (Europe) Ltd., authorised and regulated by
                   the Cyprus Securities Exchange Commission (CySEC) under
                   license #109/10.
                 </li>
@@ -187,21 +187,21 @@ export default function AboutPage() {
                   <span className="font-semibold text-gray-900 dark:text-white">
                     United Kingdom
                   </span>{" "}
-                  &mdash; ScopsTrade (UK) Ltd., authorised and regulated by the
+                  &mdash; TradeScops (UK) Ltd., authorised and regulated by the
                   Financial Conduct Authority (FCA) under FRN 583263.
                 </li>
                 <li className="text-gray-700 dark:text-gray-300 leading-relaxed">
                   <span className="font-semibold text-gray-900 dark:text-white">
                     United States
                   </span>{" "}
-                  &mdash; ScopsTrade (USA) Ltd., authorised and regulated by
+                  &mdash; TradeScops (USA) Ltd., authorised and regulated by
                   SEC; CRD 298461.
                 </li>
                 <li className="text-gray-700 dark:text-gray-300 leading-relaxed">
                   <span className="font-semibold text-gray-900 dark:text-white">
                     Middle East
                   </span>{" "}
-                  &mdash; ScopsTrade (ME) Limited, licensed by ADGM&apos;s
+                  &mdash; TradeScops (ME) Limited, licensed by ADGM&apos;s
                   Financial Services Regulatory Authority (FSRA) under
                   Permission Number 220073.
                 </li>
@@ -214,13 +214,13 @@ export default function AboutPage() {
                 Get in Touch
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                Have questions about ScopsTrade? We&apos;d love to hear from
+                Have questions about TradeScops? We&apos;d love to hear from
                 you. Reach out to our team at{" "}
                 <a
-                  href="mailto:support@scopstrade.com"
+                  href="mailto:support@tradescops.com"
                   className="text-blue-500 hover:text-blue-600 underline"
                 >
-                  support@scopstrade.com
+                  support@tradescops.com
                 </a>{" "}
                 or start a conversation through our live chat.
               </p>

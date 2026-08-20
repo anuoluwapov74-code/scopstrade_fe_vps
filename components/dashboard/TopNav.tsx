@@ -24,7 +24,6 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import NotificationDropdown from "./portfolio/NotificationDropdown";
 import UserProfileMenu from "./portfolio/UserProfileMenu";
-import Image from "next/image";
 import { apiFetch } from "@/lib/api";
 
 const primaryLinks = [
@@ -114,20 +113,9 @@ export default function TopNav({ onMenuClick, user }: TopNavProps) {
 
           {/* Logo */}
           <Link href="/" className="flex items-center gap-0">
-            <Image
-              src={"/logo_dark.png"}
-              className="block dark:hidden w-40"
-              alt=""
-              width={1000}
-              height={250}
-            />
-            <Image
-              src={"/logo_light.png"}
-              className="hidden dark:block w-40"
-              alt=""
-              width={1000}
-              height={250}
-            />
+            <span className="text-xl sm:text-2xl font-extrabold tracking-tight text-gray-900 dark:text-white">
+              Trade<span className="text-blue-600 dark:text-blue-500">Scops</span>
+            </span>
           </Link>
 
           {/* Desktop Nav Links */}

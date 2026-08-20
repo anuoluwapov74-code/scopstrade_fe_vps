@@ -14,7 +14,7 @@ export default function AffiliateProgram() {
               Affiliate Program
             </h1>
             <p className="text-gray-600 dark:text-gray-400 text-sm">
-              Earn commissions by referring traders to ScopsTrade
+              Earn commissions by referring traders to TradeScops
             </p>
           </div>
           <div className="space-y-12">
@@ -24,7 +24,7 @@ export default function AffiliateProgram() {
                 Program Overview
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                The ScopsTrade Affiliate Program rewards you for introducing new traders to our
+                The TradeScops Affiliate Program rewards you for introducing new traders to our
                 platform. Whether you are a content creator, financial educator, trading community
                 leader, or simply someone with a network of potential traders, our program offers
                 a straightforward way to earn passive income.
@@ -90,7 +90,7 @@ export default function AffiliateProgram() {
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-1">Sign Up</h3>
                     <p className="text-gray-700 dark:text-gray-300">
-                      Create your ScopsTrade account and apply for the Affiliate Program through your dashboard.
+                      Create your TradeScops account and apply for the Affiliate Program through your dashboard.
                     </p>
                   </div>
                 </div>
@@ -175,7 +175,7 @@ export default function AffiliateProgram() {
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-blue-500 font-bold">&#8226;</span>
-                  <span>Always disclose your affiliate relationship when promoting ScopsTrade</span>
+                  <span>Always disclose your affiliate relationship when promoting TradeScops</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-blue-500 font-bold">&#8226;</span>
@@ -187,7 +187,7 @@ export default function AffiliateProgram() {
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-blue-500 font-bold">&#8226;</span>
-                  <span>Do not bid on ScopsTrade branded keywords in paid advertising</span>
+                  <span>Do not bid on TradeScops branded keywords in paid advertising</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-blue-500 font-bold">&#8226;</span>
@@ -230,7 +230,7 @@ export default function AffiliateProgram() {
                 Program Termination
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                ScopsTrade reserves the right to terminate affiliate partnerships under the following
+                TradeScops reserves the right to terminate affiliate partnerships under the following
                 circumstances:
               </p>
               <ul className="space-y-2 text-gray-700 dark:text-gray-300">
@@ -263,7 +263,7 @@ export default function AffiliateProgram() {
                 Ready to Start Earning?
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                Join the ScopsTrade Affiliate Program today. Sign up, get your referral link,
+                Join the TradeScops Affiliate Program today. Sign up, get your referral link,
                 and start earning commissions on every qualified referral.
               </p>
               <div className="flex flex-wrap gap-4">

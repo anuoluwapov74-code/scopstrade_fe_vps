@@ -14,7 +14,7 @@ export default function AffiliateGuide() {
               Affiliate Guide
             </h1>
             <p className="text-gray-600 dark:text-gray-400 text-sm">
-              Everything you need to know to succeed as a ScopsTrade affiliate
+              Everything you need to know to succeed as a TradeScops affiliate
             </p>
           </div>
           <div className="space-y-12">
@@ -24,7 +24,7 @@ export default function AffiliateGuide() {
                 Welcome to the Affiliate Program
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                Thank you for joining the ScopsTrade Affiliate Program. As an affiliate, you play a
+                Thank you for joining the TradeScops Affiliate Program. As an affiliate, you play a
                 crucial role in growing our community of traders. This guide will walk you through
                 everything you need to know — from setting up your account to maximizing your earnings.
               </p>
@@ -40,12 +40,12 @@ export default function AffiliateGuide() {
                 Getting Started
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                Follow these steps to begin earning as a ScopsTrade affiliate:
+                Follow these steps to begin earning as a TradeScops affiliate:
               </p>
               <ol className="space-y-4 text-gray-700 dark:text-gray-300">
                 <li className="flex items-start gap-3">
                   <span className="bg-blue-500 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold shrink-0">1</span>
-                  <span><strong>Create your ScopsTrade account</strong> — Sign up at ScopsTrade and complete the verification process.</span>
+                  <span><strong>Create your TradeScops account</strong> — Sign up at TradeScops and complete the verification process.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="bg-blue-500 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold shrink-0">2</span>
@@ -95,10 +95,10 @@ export default function AffiliateGuide() {
             </section>
 
           
-            {/* Promoting ScopsTrade */}
+            {/* Promoting TradeScops */}
             <section>
               <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-4">
-                Promoting ScopsTrade
+                Promoting TradeScops
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
                 Here are some tips and best practices to maximize your referral earnings:
@@ -106,11 +106,11 @@ export default function AffiliateGuide() {
               <ul className="space-y-3 text-gray-700 dark:text-gray-300">
                 <li className="flex items-start gap-3">
                   <span className="text-blue-500 font-bold">&#10003;</span>
-                  <span><strong>Be authentic</strong> — Share your own experience with ScopsTrade. Genuine recommendations convert better than generic pitches.</span>
+                  <span><strong>Be authentic</strong> — Share your own experience with TradeScops. Genuine recommendations convert better than generic pitches.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-blue-500 font-bold">&#10003;</span>
-                  <span><strong>Educate your audience</strong> — Create content that explains how copy trading works and how ScopsTrade makes it accessible.</span>
+                  <span><strong>Educate your audience</strong> — Create content that explains how copy trading works and how TradeScops makes it accessible.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-blue-500 font-bold">&#10003;</span>
@@ -193,7 +193,7 @@ export default function AffiliateGuide() {
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-blue-500 font-bold">&#8226;</span>
-                  <span>Withdraw via bank transfer, cryptocurrency, or to your ScopsTrade trading account</span>
+                  <span>Withdraw via bank transfer, cryptocurrency, or to your TradeScops trading account</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-blue-500 font-bold">&#8226;</span>
@@ -237,7 +237,7 @@ export default function AffiliateGuide() {
                 Ready to Start Earning?
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                Join the ScopsTrade Affiliate Program today and start earning commissions on every
+                Join the TradeScops Affiliate Program today and start earning commissions on every
                 referral. It only takes a few minutes to get set up.
               </p>
               <div className="flex flex-wrap gap-4">

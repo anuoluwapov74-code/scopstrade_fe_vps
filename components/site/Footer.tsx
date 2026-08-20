@@ -22,7 +22,7 @@ const Footer = () => {
               </span>
             </div>
             <p className="mb-4 text-sm text-[var(--foreground-muted)]">
-              Copytrade with ScopsTrade
+              Copytrade with TradeScops
             </p>
         {/* Google and Apple store here */}
           </div>
@@ -74,7 +74,7 @@ const Footer = () => {
                 title="CONTACT"
                 links={[
                   { label: "+1 (929) 512-0241", href: "#" },
-                  { label: "support@scopstrade.com", href: "mailto:support@scopstrade.com" },
+                  { label: "support@tradescops.com", href: "mailto:support@tradescops.com" },
                 ]}
               />
             </div>

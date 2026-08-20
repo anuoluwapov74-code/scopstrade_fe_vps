@@ -21,29 +21,29 @@ export default function RiskDisclaimer() {
 
           {/* Content */}
           <div className="space-y-12">
-            {/* About ScopsTrade */}
+            {/* About TradeScops */}
             <section>
               <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-4">
-                1. About ScopsTrade
+                1. About TradeScops
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                ScopsTrade is a globally recognized financial services provider offering
+                TradeScops is a globally recognized financial services provider offering
                 access to a wide range of trading instruments and investment services.
-                ScopsTrade operates through several regulated entities across multiple
+                TradeScops operates through several regulated entities across multiple
                 jurisdictions:
               </p>
               <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 leading-relaxed space-y-2">
                 <li>
-                  ScopsTrade (Europe) Ltd. authorised by CySEC under license #109/10
+                  TradeScops (Europe) Ltd. authorised by CySEC under license #109/10
                 </li>
                 <li>
-                  ScopsTrade (UK) Ltd authorised by FCA under FRN 583263
+                  TradeScops (UK) Ltd authorised by FCA under FRN 583263
                 </li>
                 <li>
-                  ScopsTrade (USA) Ltd authorised by SEC; CRD 298461
+                  TradeScops (USA) Ltd authorised by SEC; CRD 298461
                 </li>
                 <li>
-                  ScopsTrade (ME) Limited licensed by ADGM&rsquo;s FSRA under Permission
+                  TradeScops (ME) Limited licensed by ADGM&rsquo;s FSRA under Permission
                   Number 220073
                 </li>
               </ul>
@@ -55,10 +55,10 @@ export default function RiskDisclaimer() {
                 2. Full Disclaimer
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                The information and services provided by ScopsTrade are intended for
+                The information and services provided by TradeScops are intended for
                 educational and informational purposes only and should not be construed as
                 investment advice, financial advice, trading advice, or any other type of
-                advice. ScopsTrade does not recommend that any financial instrument should
+                advice. TradeScops does not recommend that any financial instrument should
                 be bought, sold, or held by you.
               </p>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
@@ -83,7 +83,7 @@ export default function RiskDisclaimer() {
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
                 Past performance is not necessarily indicative of future results. Any
-                performance data, statistics, or results presented on the ScopsTrade
+                performance data, statistics, or results presented on the TradeScops
                 platform are provided for informational purposes only and should not be
                 relied upon as a guarantee of future performance.
               </p>
@@ -156,19 +156,19 @@ export default function RiskDisclaimer() {
                 of losing your money.
               </p>
               <p className="text-red-800 dark:text-red-300 leading-relaxed mb-4">
-                The content on the ScopsTrade platform is not directed at residents of any
+                The content on the TradeScops platform is not directed at residents of any
                 country or jurisdiction where such distribution or use would be contrary
                 to local law or regulation. It is your responsibility to ensure that your
-                use of the ScopsTrade platform complies with all applicable laws and
+                use of the TradeScops platform complies with all applicable laws and
                 regulations in your jurisdiction.
               </p>
               <p className="text-red-800 dark:text-red-300 leading-relaxed">
-                ScopsTrade does not accept liability for any loss or damage, including
+                TradeScops does not accept liability for any loss or damage, including
                 without limitation any loss of profit, which may arise directly or
                 indirectly from use of or reliance on the information provided on our
                 platform. You are solely responsible for evaluating the merits and risks
                 associated with using any information, products, or services provided
-                through ScopsTrade.
+                through TradeScops.
               </p>
             </section>
 

@@ -27,7 +27,7 @@ export default function ConflictOfInterest() {
                 1. Our Commitment to Fair Practice
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                ScopsTrade is committed to maintaining the highest standards of integrity
+                TradeScops is committed to maintaining the highest standards of integrity
                 and fairness in all our business dealings. We recognize that conflicts of
                 interest may arise in the normal course of our business and have
                 established this policy to identify, prevent, and manage such conflicts
@@ -42,14 +42,14 @@ export default function ConflictOfInterest() {
                 2. What is a Conflict of Interest?
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                A conflict of interest arises when the interests of ScopsTrade, its
+                A conflict of interest arises when the interests of TradeScops, its
                 employees, or its affiliates may conflict with the interests of our
                 clients. Conflicts can take many forms, including but not limited to:
               </p>
               <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 leading-relaxed space-y-2">
                 <li>
                   <span className="font-semibold">Financial Interests:</span> Where
-                  ScopsTrade or its employees may benefit financially at the expense of a
+                  TradeScops or its employees may benefit financially at the expense of a
                   client
                 </li>
                 <li>
@@ -59,7 +59,7 @@ export default function ConflictOfInterest() {
                 </li>
                 <li>
                   <span className="font-semibold">Competing Interests:</span> Where
-                  ScopsTrade provides services to multiple clients whose interests may
+                  TradeScops provides services to multiple clients whose interests may
                   conflict with one another
                 </li>
                 <li>
@@ -76,7 +76,7 @@ export default function ConflictOfInterest() {
                 3. Identifying Conflicts of Interest
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                ScopsTrade maintains robust processes for identifying potential and actual
+                TradeScops maintains robust processes for identifying potential and actual
                 conflicts of interest. All employees are required to be vigilant in
                 recognizing situations where conflicts may arise and to report them
                 promptly to the compliance department. We conduct regular assessments of
@@ -91,7 +91,7 @@ export default function ConflictOfInterest() {
                 4. Managing Conflicts of Interest
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                When conflicts of interest are identified, ScopsTrade employs a range of
+                When conflicts of interest are identified, TradeScops employs a range of
                 measures to manage and mitigate them:
               </p>
               <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 leading-relaxed space-y-2">
@@ -113,7 +113,7 @@ export default function ConflictOfInterest() {
                 </li>
                 <li>
                   <span className="font-semibold">Declining to Act:</span> In cases where
-                  a conflict cannot be adequately managed, ScopsTrade may decline to
+                  a conflict cannot be adequately managed, TradeScops may decline to
                   provide services to avoid potential harm to client interests.
                 </li>
               </ul>
@@ -125,7 +125,7 @@ export default function ConflictOfInterest() {
                 5. Order Execution and Best Execution
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                ScopsTrade is committed to achieving the best possible result for our
+                TradeScops is committed to achieving the best possible result for our
                 clients when executing orders. Our order execution policy is designed to
                 ensure that we take all reasonable steps to obtain the best possible
                 execution for our clients, taking into account factors such as price,
@@ -141,7 +141,7 @@ export default function ConflictOfInterest() {
                 6. Employee Trading and Personal Account Dealing
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                All ScopsTrade employees are subject to strict personal account dealing
+                All TradeScops employees are subject to strict personal account dealing
                 policies. Employees must obtain prior approval before executing personal
                 trades in financial instruments and must disclose all personal trading
                 accounts. These measures are designed to prevent employees from trading
@@ -156,7 +156,7 @@ export default function ConflictOfInterest() {
                 7. Inducements and Remuneration
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                ScopsTrade has policies in place to ensure that remuneration and incentive
+                TradeScops has policies in place to ensure that remuneration and incentive
                 structures do not create conflicts that could adversely affect the quality
                 of service provided to clients. We do not accept or pay inducements that
                 would conflict with our duty to act in the best interests of our clients.
@@ -172,7 +172,7 @@ export default function ConflictOfInterest() {
                 8. Third-Party Relationships
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                ScopsTrade maintains various relationships with third-party service
+                TradeScops maintains various relationships with third-party service
                 providers, liquidity providers, and business partners. We carefully manage
                 these relationships to ensure they do not create conflicts of interest
                 that could disadvantage our clients. All third-party arrangements are
@@ -186,7 +186,7 @@ export default function ConflictOfInterest() {
                 9. Monitoring and Review
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                ScopsTrade regularly monitors and reviews the effectiveness of this
+                TradeScops regularly monitors and reviews the effectiveness of this
                 Conflict of Interest Policy. Our compliance department conducts periodic
                 reviews of our business activities, employee conduct, and organizational
                 structure to identify new or emerging conflicts. This policy is reviewed
@@ -201,7 +201,7 @@ export default function ConflictOfInterest() {
                 10. Record Keeping
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                ScopsTrade maintains comprehensive records of all identified conflicts of
+                TradeScops maintains comprehensive records of all identified conflicts of
                 interest, the measures taken to manage them, and any disclosures made to
                 clients. These records are retained in accordance with applicable
                 regulatory requirements and are available for inspection by relevant
@@ -215,7 +215,7 @@ export default function ConflictOfInterest() {
                 11. Disclosure to Clients
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                Where ScopsTrade identifies a conflict of interest that cannot be
+                Where TradeScops identifies a conflict of interest that cannot be
                 adequately managed through our internal procedures, we will disclose the
                 nature and source of the conflict to affected clients before undertaking
                 any business with them. This disclosure will be made in sufficient detail
@@ -231,7 +231,7 @@ export default function ConflictOfInterest() {
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                 If you believe that a conflict of interest has adversely affected you, or
-                if you have any concerns about how ScopsTrade manages conflicts of
+                if you have any concerns about how TradeScops manages conflicts of
                 interest, we encourage you to report your concerns to our compliance
                 department. All reports will be investigated promptly and thoroughly, and
                 appropriate corrective action will be taken where necessary. You may also
@@ -250,7 +250,7 @@ export default function ConflictOfInterest() {
                 Instruments Directive (MiFID II), the rules of the Financial Conduct
                 Authority (FCA), the Cyprus Securities and Exchange Commission (CySEC),
                 the Securities and Exchange Commission (SEC), and the Abu Dhabi Global
-                Market Financial Services Regulatory Authority (ADGM FSRA). ScopsTrade is
+                Market Financial Services Regulatory Authority (ADGM FSRA). TradeScops is
                 committed to full compliance with all regulatory obligations relating to
                 the management of conflicts of interest.
               </p>

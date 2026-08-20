@@ -2,12 +2,23 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { ArrowDownUp, Loader2, ArrowLeft } from "lucide-react";
+import { ArrowDownUp, Loader2, ArrowLeft, ArrowUpRight, ArrowDownRight, Info } from "lucide-react";
 import { toast } from "sonner";
 import { apiFetch } from "@/lib/api";
 import Link from "next/link";
 
 type Direction = "balance_to_profit" | "profit_to_balance";
+
+type TransferRecord = {
+  id: number;
+  direction: Direction;
+  direction_display: string;
+  amount: string;
+  balance_after: string;
+  profit_after: string;
+  currency: string;
+  created_at: string;
+};
 
 export default function TransferPage() {
   const [balance, setBalance] = useState("0.00");
@@ -18,6 +29,8 @@ export default function TransferPage() {
   const [amount, setAmount] = useState("");
   const [loading, setLoading] = useState(true);
   const [submitting, setSubmitting] = useState(false);
+  const [history, setHistory] = useState<TransferRecord[]>([]);
+  const [historyLoading, setHistoryLoading] = useState(true);
 
   const fromLabel = direction === "balance_to_profit" ? "Balance" : "Profit";
   const toLabel = direction === "balance_to_profit" ? "Profit" : "Balance";
@@ -26,7 +39,29 @@ export default function TransferPage() {
 
   useEffect(() => {
     fetchInfo();
+    fetchHistory();
   }, []);
+
+  const fetchHistory = async () => {
+    setHistoryLoading(true);
+    try {
+      const res = await apiFetch("/transfer/history/");
+      const data = await res.json();
+      if (res.ok) {
+        setHistory(data.results || []);
+      }
+    } catch (err) {
+      console.error("Transfer history fetch error:", err);
+    } finally {
+      setHistoryLoading(false);
+    }
+  };
+
+  const formatDate = (dateString: string) => {
+    return new Date(dateString).toLocaleDateString("en-US", {
+      month: "short", day: "numeric", year: "numeric", hour: "2-digit", minute: "2-digit",
+    });
+  };
 
   const fetchInfo = async () => {
     setLoading(true);
@@ -88,6 +123,7 @@ export default function TransferPage() {
         setBalance(data.balance);
         setProfit(data.profit);
         setAmount("");
+        fetchHistory();
       } else {
         toast.error(data.error || "Transfer failed");
       }
@@ -224,6 +260,65 @@ export default function TransferPage() {
           "Confirm"
         )}
       </button>
+
+      {/* Transfer History */}
+      <div className="mt-10">
+        <h2 className="text-sm font-semibold text-gray-900 dark:text-white mb-3">
+          Transfer History
+        </h2>
+        <div className="bg-white/90 dark:bg-white/[0.04] backdrop-blur-xl border border-gray-200/50 dark:border-white/8 rounded-2xl shadow-sm overflow-hidden">
+          {historyLoading ? (
+            <div className="flex items-center justify-center py-12">
+              <Loader2 className="w-6 h-6 text-blue-500 animate-spin" />
+            </div>
+          ) : history.length === 0 ? (
+            <div className="text-center py-12 px-4">
+              <Info className="w-8 h-8 text-gray-400 dark:text-gray-500 mx-auto mb-2" />
+              <p className="text-sm text-gray-500 dark:text-gray-400">No transfers yet</p>
+              <p className="text-xs text-gray-400 dark:text-gray-500 mt-1">
+                Your transfer history will appear here.
+              </p>
+            </div>
+          ) : (
+            <div className="divide-y divide-gray-100 dark:divide-white/5">
+              {history.map((h) => {
+                const isToProfit = h.direction === "balance_to_profit";
+                return (
+                  <div
+                    key={h.id}
+                    className="flex items-center justify-between p-4 hover:bg-gray-50 dark:hover:bg-white/[0.02] transition-colors"
+                  >
+                    <div className="flex items-center gap-3">
+                      <div
+                        className={`w-9 h-9 rounded-full flex items-center justify-center ${
+                          isToProfit ? "bg-green-500/15" : "bg-blue-500/15"
+                        }`}
+                      >
+                        {isToProfit ? (
+                          <ArrowUpRight className="w-4 h-4 text-green-400" />
+                        ) : (
+                          <ArrowDownRight className="w-4 h-4 text-blue-400" />
+                        )}
+                      </div>
+                      <div>
+                        <p className="text-sm font-medium text-gray-900 dark:text-white">
+                          {h.direction_display}
+                        </p>
+                        <p className="text-xs text-gray-500 dark:text-gray-400">
+                          {formatDate(h.created_at)}
+                        </p>
+                      </div>
+                    </div>
+                    <span className="text-sm font-semibold text-gray-900 dark:text-white">
+                      ${parseFloat(h.amount).toLocaleString(undefined, { minimumFractionDigits: 2 })}
+                    </span>
+                  </div>
+                );
+              })}
+            </div>
+          )}
+        </div>
+      </div>
     </motion.div>
   );
 }

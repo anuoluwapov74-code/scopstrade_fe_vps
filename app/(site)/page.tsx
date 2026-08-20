@@ -34,7 +34,7 @@ export default function Home() {
         <FeaturesSection />
         <WhatYouCanCopy />
         <FAQSection />
-        <TeamSection />
+        {/* <TeamSection /> */}
         <TrustSection />
         <CTASection />
         <LiquidityProvidersSection />

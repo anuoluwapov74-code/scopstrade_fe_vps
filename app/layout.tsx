@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Poppins, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
@@ -19,10 +19,10 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://scopstrades.com"),
+  metadataBase: new URL("https://tradescops.com"),
   title: {
-    default: "ScopsTrades - Copy Futures, Options & Contracts with Precision",
-    template: "%s | ScopsTrades",
+    default: "TradeScops - Copy Futures, Options & Contracts with Precision",
+    template: "%s | TradeScops",
   },
   description:
     "Mirror real-time stock and options trades from top-performing traders. Precision, flexibility, and transparency straight to your fingertips.",
@@ -32,30 +32,26 @@ export const metadata: Metadata = {
     "options trading",
     "stock trading",
     "trade copying",
-    "ScopsTrades",
+    "TradeScops",
   ],
   openGraph: {
+    // Image is supplied automatically by app/opengraph-image.png (Next.js file
+    // convention) — do not duplicate it here, file-based metadata takes
+    // priority over this config and would just shadow it.
     type: "website",
-    url: "https://scopstrades.com",
-    siteName: "ScopsTrades",
-    title: "ScopsTrades - Copy Futures, Options & Contracts with Precision",
+    url: "https://tradescops.com",
+    siteName: "TradeScops",
+    title: "TradeScops - Copy Futures, Options & Contracts with Precision",
     description:
       "Mirror real-time stock and options trades from top-performing traders. Precision, flexibility, and transparency straight to your fingertips.",
-    images: [
-      {
-        url: "https://scopstrades.com/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "ScopsTrades - Social Copy Trading Platform",
-      },
-    ],
   },
   twitter: {
+    // Image is supplied automatically by app/twitter-image.png (Next.js file
+    // convention) — same reasoning as openGraph above.
     card: "summary_large_image",
-    title: "ScopsTrades - Copy Futures, Options & Contracts with Precision",
+    title: "TradeScops - Copy Futures, Options & Contracts with Precision",
     description:
       "Mirror real-time stock and options trades from top-performing traders. Precision, flexibility, and transparency straight to your fingertips.",
-    images: ["https://scopstrades.com/og-image.png"],
   },
   icons: {
     icon: [
@@ -66,6 +62,10 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
   manifest: "/site.webmanifest",
+};
+
+export const viewport: Viewport = {
+  themeColor: "#100d4b",
 };
 
 export default function RootLayout({

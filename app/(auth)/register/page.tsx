@@ -4,7 +4,6 @@ import React, { useState, useEffect, useMemo, Suspense } from "react";
 import { useForm, Controller } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import Select, {
   FormatOptionLabelMeta,
@@ -276,27 +275,10 @@ function RegisterPageContent() {
           {/* Logo */}
           <Link
             href="/"
-            className="hidden dark:flex text-2xl md:text-4xl mb-10 font-extrabold self-center tracking-tight items-center gap-1 text-blue-600"
+            className="flex text-2xl md:text-4xl mb-10 font-extrabold self-center tracking-tight items-center gap-1"
           >
-            <Image
-              src={"/logo_light.png"}
-              className="hidden dark:block w-50"
-              alt=""
-              width={1000}
-              height={250}
-            />
-          </Link>
-          <Link
-            href="/"
-            className="flex dark:hidden text-2xl md:text-4xl mb-10 font-extrabold self-center tracking-tight items-center gap-1"
-          >
-            <Image
-              src={"/logo_dark.png"}
-              className="block dark:hidden w-50"
-              alt=""
-              width={1000}
-              height={250}
-            />
+            <span className="text-gray-900 dark:text-white">Trade</span>
+            <span className="text-blue-600">Scops</span>
           </Link>
 
           {/* Theme toggle */}

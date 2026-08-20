@@ -3,7 +3,6 @@
 import React from "react";
 import Link from "next/link";
 import { useTheme } from "next-themes";
-import Image from "next/image";
 
 const Navbar = () => {
   const { theme, setTheme } = useTheme();
@@ -34,20 +33,9 @@ const Navbar = () => {
         <div className="flex h-16 items-center justify-between lg:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-0">
-            <Image
-              src={"/logo_dark.png"}
-              className="block dark:hidden w-32 sm:w-40 lg:w-44"
-              alt="ScopTrade"
-              width={1000}
-              height={250}
-            />
-            <Image
-              src={"/logo_light.png"}
-              className="hidden dark:block w-32 sm:w-40 lg:w-44"
-              alt="ScopTrade"
-              width={1000}
-              height={250}
-            />
+            <span className="text-2xl sm:text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">
+              Trade<span className="text-[var(--primary)]">Scops</span>
+            </span>
           </Link>
 
           {/* Desktop Navigation */}

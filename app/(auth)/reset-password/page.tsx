@@ -4,7 +4,6 @@ import { useState, useEffect, Suspense } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { Eye, EyeOff, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -242,20 +241,10 @@ function ResetPasswordContent() {
       >
         {/* Logo */}
         <Link href="/" className="flex items-center gap-0">
-          <Image
-            src={"/logo_dark.png"}
-            className="block dark:hidden w-50"
-            alt=""
-            width={1000}
-            height={250}
-          />
-          <Image
-            src={"/logo_light.png"}
-            className="hidden dark:block w-50"
-            alt=""
-            width={1000}
-            height={250}
-          />
+          <span className="text-2xl md:text-4xl font-extrabold tracking-tight">
+            <span className="text-gray-900 dark:text-white">Trade</span>
+            <span className="text-blue-600">Scops</span>
+          </span>
         </Link>
 
         <div className="space-y-2">

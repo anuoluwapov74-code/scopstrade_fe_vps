@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { Eye, EyeOff, Sun, Moon, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -97,27 +96,10 @@ export default function LoginPage() {
         >
           <Link
             href="/"
-            className="hidden dark:flex text-2xl md:text-4xl mb-10 font-extrabold self-center tracking-tight items-center gap-1 text-blue-600"
+            className="flex text-2xl md:text-4xl mb-10 font-extrabold self-center tracking-tight items-center gap-1"
           >
-            <Image
-              src={"/logo_light.png"}
-              className="hidden dark:block w-50"
-              alt=""
-              width={1000}
-              height={250}
-            />
-          </Link>
-          <Link
-            href="/"
-            className="flex dark:hidden text-2xl md:text-4xl mb-10 font-extrabold self-center tracking-tight items-center gap-1"
-          >
-            <Image
-              src={"/logo_dark.png"}
-              className="block dark:hidden w-50"
-              alt=""
-              width={1000}
-              height={250}
-            />
+            <span className="text-gray-900 dark:text-white">Trade</span>
+            <span className="text-blue-600">Scops</span>
           </Link>
 
           <div className="flex items-center justify-between">
@@ -285,7 +267,7 @@ export default function LoginPage() {
           
           <div className="text-center mt-1 text-sm space-y-2.5">
             <p className="text-gray-400 dark:text-white">
-              Copyright &copy; {new Date().getFullYear()} ScopsTrade
+              Copyright &copy; {new Date().getFullYear()} TradeScops
             </p>
             {/* <div className="flex items-center justify-center gap-4">
               <Link className="text-blue-500 hover:underline" href={"/"}>

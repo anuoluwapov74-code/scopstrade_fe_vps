@@ -1,34 +1,13 @@
 "use client";
 
-import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
-import Image from "next/image";
-
 export default function Preloader() {
-  const { resolvedTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  // Avoid hydration mismatch by showing a neutral state until mounted
-  const logoSrc = mounted && resolvedTheme === "dark"
-    ? "/logo_light.png"
-    : "/logo_dark.png";
-
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-white dark:bg-gradient-to-br dark:from-[#0a1628] dark:via-[#0d1b2a] dark:to-[#1b263b]">
       {/* Logo */}
       <div className="mb-12">
-        <Image
-          src={logoSrc}
-          alt="ScopsTrade"
-          width={300}
-          height={75}
-          className="w-64 h-auto"
-          priority
-        />
+        <span className="text-4xl sm:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white">
+          Trade<span className="text-blue-600 dark:text-blue-500">Scops</span>
+        </span>
       </div>
 
       {/* Circular Loading Spinner */}

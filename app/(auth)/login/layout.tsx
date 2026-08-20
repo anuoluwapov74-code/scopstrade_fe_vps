@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Log In",
-  description: "Log in to your ScopTrade account to start copy trading.",
+  description: "Log in to your TradeScops account to start copy trading.",
 };
 
 export default function LoginLayout({ children }: { children: React.ReactNode }) {

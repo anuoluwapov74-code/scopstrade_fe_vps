@@ -27,6 +27,6 @@ export default function robots(): MetadataRoute.Robots {
         ],
       },
     ],
-    sitemap: "https://scopstrade.com/sitemap.xml",
+    sitemap: "https://tradescops.com/sitemap.xml",
   };
 }
