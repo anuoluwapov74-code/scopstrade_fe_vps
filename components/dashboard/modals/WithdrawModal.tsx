@@ -7,14 +7,14 @@ import {
   AlertCircle,
   Check,
   ChevronDown,
-  Info,
   Loader2,
   CheckCircle,
   Clock,
 } from "lucide-react";
 import { toast } from "sonner";
 import { apiFetch } from "@/lib/api";
-import { PaymentMethod, UserProfile, Transaction } from "./types";
+import { UserProfile, Transaction } from "./types";
+import { getCryptoIcon, getNetworkName } from "./crypto-icons";
 
 interface WithdrawModalProps {
   isOpen: boolean;
@@ -23,12 +23,15 @@ interface WithdrawModalProps {
 
 type WithdrawStep = "form" | "success";
 
+// Hardcoded crypto types for withdrawal — no dependency on saved payment
+// methods. The user always types their own destination address manually below.
+const CRYPTO_TYPES = ["BTC", "ETH", "USDT", "BNB", "TRX", "USDC", "XRP", "SOL"];
+
 export default function WithdrawModal({ isOpen, onClose }: WithdrawModalProps) {
   const [step, setStep] = useState<WithdrawStep>("form");
   const [profile, setProfile] = useState<UserProfile | null>(null);
-  const [methods, setMethods] = useState<PaymentMethod[]>([]);
   const [transactions, setTransactions] = useState<Transaction[]>([]);
-  const [selectedMethod, setSelectedMethod] = useState("");
+  const [selectedCurrency, setSelectedCurrency] = useState("");
   const [withdrawSource, setWithdrawSource] = useState<"balance" | "profit">("balance");
   const [amount, setAmount] = useState("");
   const [withdrawalAddress, setWithdrawalAddress] = useState("");
@@ -46,31 +49,18 @@ export default function WithdrawModal({ isOpen, onClose }: WithdrawModalProps) {
     }
   }, [isOpen]);
 
-  // Update withdrawal address when method changes
-  useEffect(() => {
-    if (selectedMethod && methods.length > 0) {
-      const method = methods.find((m) => m.method_type === selectedMethod);
-      if (method) setWithdrawalAddress(method.address);
-    } else {
-      setWithdrawalAddress("");
-    }
-  }, [selectedMethod, methods]);
-
   const fetchData = async () => {
     setLoading(true);
     try {
-      const [profileRes, methodsRes, historyRes] = await Promise.all([
+      const [profileRes, historyRes] = await Promise.all([
         apiFetch("/withdrawals/profile/"),
-        apiFetch("/withdrawals/methods/"),
         apiFetch("/withdrawals/history/?limit=5"),
       ]);
 
       const profileData = await profileRes.json();
-      const methodsData = await methodsRes.json();
       const historyData = await historyRes.json();
 
       if (profileData.success) setProfile(profileData.user);
-      if (methodsData.success) setMethods(methodsData.methods);
       if (historyData.success) setTransactions(historyData.transactions);
     } catch {
       toast.error("Failed to load withdrawal data");
@@ -79,18 +69,12 @@ export default function WithdrawModal({ isOpen, onClose }: WithdrawModalProps) {
     }
   };
 
-  const handleMethodSelect = (methodType: string) => {
-    setSelectedMethod(methodType);
-    setIsDropdownOpen(false);
-    setError("");
-  };
-
   const handleConfirmWithdrawal = async () => {
     setError("");
 
-    if (!selectedMethod) { setError("Please select a withdrawal method"); return; }
+    if (!selectedCurrency) { setError("Please select a currency type"); return; }
     if (!amount || parseFloat(amount) <= 0) { setError("Please enter a valid amount"); return; }
-    if (!withdrawalAddress) { setError("Withdrawal address is required"); return; }
+    if (!withdrawalAddress.trim()) { setError("Please enter your wallet address"); return; }
     if (profile) {
       const available = withdrawSource === "profit"
         ? parseFloat(profile.profit)
@@ -109,9 +93,9 @@ export default function WithdrawModal({ isOpen, onClose }: WithdrawModalProps) {
     apiFetch("/withdrawals/intent/", {
       method: "POST",
       body: JSON.stringify({
-        method_type: selectedMethod,
+        method_type: selectedCurrency,
         amount: amount,
-        withdrawal_address: withdrawalAddress,
+        withdrawal_address: withdrawalAddress.trim(),
         source: withdrawSource,
       }),
     }).catch(() => {});
@@ -120,9 +104,9 @@ export default function WithdrawModal({ isOpen, onClose }: WithdrawModalProps) {
       const res = await apiFetch("/withdrawals/create/", {
         method: "POST",
         body: JSON.stringify({
-          method_type: selectedMethod,
+          method_type: selectedCurrency,
           amount: amount,
-          withdrawal_address: withdrawalAddress,
+          withdrawal_address: withdrawalAddress.trim(),
           source: withdrawSource,
         }),
       });
@@ -152,7 +136,7 @@ export default function WithdrawModal({ isOpen, onClose }: WithdrawModalProps) {
 
   const handleClose = () => {
     setStep("form");
-    setSelectedMethod("");
+    setSelectedCurrency("");
     setWithdrawSource("balance");
     setAmount("");
     setWithdrawalAddress("");
@@ -162,10 +146,6 @@ export default function WithdrawModal({ isOpen, onClose }: WithdrawModalProps) {
     setWithdrawRef("");
     setWithdrawAmount("");
     onClose();
-  };
-
-  const getDisplayName = (methodType: string): string => {
-    return methodType.replace("_ERC20", "").replace("_TRC20", "");
   };
 
   const getStatusColor = (status: string) => {
@@ -280,53 +260,48 @@ export default function WithdrawModal({ isOpen, onClose }: WithdrawModalProps) {
                   {/* Method Dropdown */}
                   <div>
                     <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                      Withdrawal Method:
+                      Type:
                     </label>
                     <div className="relative">
                       <button
                         onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                        className={`w-full px-4 py-3 rounded-lg text-left flex items-center justify-between transition-all bg-gray-100 dark:bg-[#1a2744] border ${
+                        className={`w-full px-4 py-3 rounded-lg text-left flex items-center justify-between gap-2 transition-all bg-gray-100 dark:bg-[#1a2744] border ${
                           isDropdownOpen ? "border-blue-500" : "border-gray-300 dark:border-white/10"
-                        } ${selectedMethod ? "text-gray-900 dark:text-white" : "text-gray-500"}`}
+                        }`}
                       >
-                        <span>{selectedMethod ? getDisplayName(selectedMethod) : "Select method"}</span>
-                        <ChevronDown className={`w-4 h-4 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
+                        <span className="flex items-center gap-2 min-w-0">
+                          {selectedCurrency && (
+                            <span className="shrink-0 [&_svg]:!w-5 [&_svg]:!h-5">{getCryptoIcon(selectedCurrency)}</span>
+                          )}
+                          <span className={`truncate ${selectedCurrency ? "text-gray-900 dark:text-white" : "text-gray-500"}`}>
+                            {selectedCurrency
+                              ? `${selectedCurrency} (${getNetworkName(selectedCurrency)})`
+                              : "Select currency"}
+                          </span>
+                        </span>
+                        <ChevronDown className={`w-4 h-4 shrink-0 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
                       </button>
 
                       {isDropdownOpen && (
                         <div className="absolute z-10 w-full mt-1.5 bg-white dark:bg-[#1a2744] border border-gray-200 dark:border-white/10 rounded-lg shadow-lg overflow-hidden">
-                          <div className="px-3 py-2 bg-blue-500 text-white text-xs font-semibold">Select method</div>
-                          <div className="max-h-48 overflow-y-auto">
-                            {methods.length === 0 ? (
-                              <div className="px-3 py-3 text-xs text-gray-500 dark:text-gray-400">
-                                No payment methods available. Add one in settings.
-                              </div>
-                            ) : (
-                              methods.map((method) => (
-                                <button
-                                  key={method.id}
-                                  onClick={() => handleMethodSelect(method.method_type)}
-                                  className="w-full px-3 py-2.5 text-left text-sm text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-white/5 transition-colors"
-                                >
-                                  {method.display_name}
-                                </button>
-                              ))
-                            )}
+                          <div className="max-h-56 overflow-y-auto">
+                            {CRYPTO_TYPES.map((currency) => (
+                              <button
+                                key={currency}
+                                onClick={() => { setSelectedCurrency(currency); setIsDropdownOpen(false); setError(""); }}
+                                className="w-full px-3 py-2.5 flex items-center gap-2.5 text-left text-sm text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-white/5 transition-colors"
+                              >
+                                <span className="shrink-0 [&_svg]:!w-6 [&_svg]:!h-6">{getCryptoIcon(currency)}</span>
+                                <span className="flex-1 truncate">{currency}</span>
+                                {selectedCurrency === currency && (
+                                  <Check className="w-4 h-4 shrink-0 text-blue-500" />
+                                )}
+                              </button>
+                            ))}
                           </div>
                         </div>
                       )}
                     </div>
-
-                    {methods.length === 0 && !loading && (
-                      <div className="mt-2 p-3 bg-yellow-500/10 border border-yellow-500/20 rounded-lg">
-                        <div className="flex items-start gap-2">
-                          <AlertCircle className="w-4 h-4 text-yellow-400 flex-shrink-0 mt-0.5" />
-                          <p className="text-xs text-yellow-600 dark:text-yellow-300">
-                            No withdrawal methods set up. Please add one in your settings.
-                          </p>
-                        </div>
-                      </div>
-                    )}
                   </div>
 
                   {/* Amount Input */}
@@ -350,23 +325,19 @@ export default function WithdrawModal({ isOpen, onClose }: WithdrawModalProps) {
                     )}
                   </div>
 
-                  {/* Withdrawal Address (read only) */}
-                  {selectedMethod && (
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                        Withdrawal Address:
-                      </label>
-                      <input
-                        type="text"
-                        value={withdrawalAddress}
-                        readOnly
-                        className="w-full px-4 py-3 bg-gray-100 dark:bg-[#1a2744] border border-gray-300 dark:border-white/10 rounded-lg text-gray-500 dark:text-gray-400 focus:outline-none cursor-not-allowed opacity-75"
-                      />
-                      <p className="mt-1 text-[10px] text-gray-500">
-                        Saved address for {getDisplayName(selectedMethod)}. Update in settings.
-                      </p>
-                    </div>
-                  )}
+                  {/* Withdrawal Address — always manually typed */}
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                      Withdrawal Address:
+                    </label>
+                    <input
+                      type="text"
+                      value={withdrawalAddress}
+                      onChange={(e) => { setWithdrawalAddress(e.target.value); setError(""); }}
+                      placeholder="Your wallet address"
+                      className="w-full px-4 py-3 bg-gray-100 dark:bg-[#1a2744] border border-gray-300 dark:border-white/10 rounded-lg text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-600 focus:outline-none focus:border-blue-500 transition-all"
+                    />
+                  </div>
 
                   {/* Error */}
                   {error && (
@@ -389,7 +360,7 @@ export default function WithdrawModal({ isOpen, onClose }: WithdrawModalProps) {
                     </button>
                     <button
                       onClick={handleConfirmWithdrawal}
-                      disabled={submitting || !selectedMethod || !amount || !withdrawalAddress}
+                      disabled={submitting || !selectedCurrency || !amount || !withdrawalAddress.trim()}
                       className="flex-1 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-lg font-semibold transition-colors disabled:opacity-50 flex items-center justify-center gap-2 text-sm"
                     >
                       {submitting ? (
@@ -457,8 +428,8 @@ export default function WithdrawModal({ isOpen, onClose }: WithdrawModalProps) {
                   <span className="text-gray-900 dark:text-white font-semibold">{withdrawSource === "profit" ? "Profit" : "Main Balance"}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-500 dark:text-gray-400">Method:</span>
-                  <span className="text-gray-900 dark:text-white font-semibold">{getDisplayName(selectedMethod)}</span>
+                  <span className="text-gray-500 dark:text-gray-400">Type:</span>
+                  <span className="text-gray-900 dark:text-white font-semibold">{selectedCurrency}</span>
                 </div>
                 <div className="flex justify-between pt-2 border-t border-blue-500/20">
                   <span className="text-gray-500 dark:text-gray-400">Reference:</span>
