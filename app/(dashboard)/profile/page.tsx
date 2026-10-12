@@ -232,11 +232,14 @@ export default function ProfilePage() {
                       Date of Birth
                     </p>
                     <p className="text-base font-semibold text-gray-900 dark:text-white">
-                      {new Date(profile.dob).toLocaleDateString("en-US", {
-                        year: "numeric",
-                        month: "long",
-                        day: "numeric",
-                      })}
+                      {(() => {
+                        const [y, m, d] = profile.dob.split("-").map(Number);
+                        return new Date(y, m - 1, d).toLocaleDateString("en-US", {
+                          year: "numeric",
+                          month: "long",
+                          day: "numeric",
+                        });
+                      })()}
                     </p>
                   </div>
                 </div>
