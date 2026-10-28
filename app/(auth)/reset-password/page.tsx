@@ -243,7 +243,7 @@ function ResetPasswordContent() {
         <Link href="/" className="flex items-center gap-0">
           <span className="text-2xl md:text-4xl font-extrabold tracking-tight">
             <span className="text-gray-900 dark:text-white">Trade</span>
-            <span className="text-blue-600">Scops</span>
+            <span className="text-blue-600">Scopify</span>
           </span>
         </Link>
 

@@ -18,11 +18,11 @@ const Footer = () => {
           <div className="lg:col-span-3">
             <div className="mb-4">
               <span className="text-2xl font-bold">
-                Scops<span className="text-[var(--primary)]">Trade</span>
+                Trade<span className="text-[var(--primary)]">Scopify</span>
               </span>
             </div>
             <p className="mb-4 text-sm text-[var(--foreground-muted)]">
-              Copytrade with TradeScops
+              Copytrade with TradeScopify
             </p>
         {/* Google and Apple store here */}
           </div>

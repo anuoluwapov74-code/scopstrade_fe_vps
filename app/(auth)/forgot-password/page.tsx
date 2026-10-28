@@ -121,7 +121,7 @@ export default function ForgotPasswordPage() {
           className="flex text-2xl md:text-4xl font-extrabold justify-center"
         >
           <span className="text-gray-900 dark:text-white">Trade</span>
-          <span className="text-blue-600">Scops</span>
+          <span className="text-blue-600">Scopify</span>
         </Link>
 
         <div className="space-y-2">

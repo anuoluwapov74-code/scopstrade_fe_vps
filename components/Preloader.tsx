@@ -6,7 +6,7 @@ export default function Preloader() {
       {/* Logo */}
       <div className="mb-12">
         <span className="text-4xl sm:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white">
-          Trade<span className="text-blue-600 dark:text-blue-500">Scops</span>
+          Trade<span className="text-blue-600 dark:text-blue-500">Scopify</span>
         </span>
       </div>
 

@@ -34,7 +34,7 @@ const Navbar = () => {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-0">
             <span className="text-2xl sm:text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">
-              Trade<span className="text-[var(--primary)]">Scops</span>
+              Trade<span className="text-[var(--primary)]">Scopify</span>
             </span>
           </Link>
 

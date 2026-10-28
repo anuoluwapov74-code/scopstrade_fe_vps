@@ -99,7 +99,7 @@ export default function LoginPage() {
             className="flex text-2xl md:text-4xl mb-10 font-extrabold self-center tracking-tight items-center gap-1"
           >
             <span className="text-gray-900 dark:text-white">Trade</span>
-            <span className="text-blue-600">Scops</span>
+            <span className="text-blue-600">Scopify</span>
           </Link>
 
           <div className="flex items-center justify-between">
@@ -267,7 +267,7 @@ export default function LoginPage() {
           
           <div className="text-center mt-1 text-sm space-y-2.5">
             <p className="text-gray-400 dark:text-white">
-              Copyright &copy; {new Date().getFullYear()} TradeScops
+              Copyright &copy; {new Date().getFullYear()} TradeScopify
             </p>
             {/* <div className="flex items-center justify-center gap-4">
               <Link className="text-blue-500 hover:underline" href={"/"}>

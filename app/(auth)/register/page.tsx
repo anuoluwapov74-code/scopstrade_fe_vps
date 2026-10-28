@@ -278,7 +278,7 @@ function RegisterPageContent() {
             className="flex text-2xl md:text-4xl mb-10 font-extrabold self-center tracking-tight items-center gap-1"
           >
             <span className="text-gray-900 dark:text-white">Trade</span>
-            <span className="text-blue-600">Scops</span>
+            <span className="text-blue-600">Scopify</span>
           </Link>
 
           {/* Theme toggle */}

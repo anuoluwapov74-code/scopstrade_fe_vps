@@ -20,7 +20,7 @@ export default function BrokerPartnership() {
             </h1>
             <p className="mt-6 text-gray-600 dark:text-gray-400 leading-relaxed max-w-xl mx-auto">
               You can be the first brokerage industry innovation. With
-              TradeScops, alongside your Traders and restart your profits
+              TradeScopify, alongside your Traders and restart your profits
               manifold.
             </p>
             <div className="mt-10">
@@ -34,14 +34,14 @@ export default function BrokerPartnership() {
           </div>
         </section>
 
-        {/* Why Partner With TradeScops (img5) */}
+        {/* Why Partner With TradeScopify (img5) */}
         <section className="px-6 py-16 lg:py-24">
           <div className="mx-auto max-w-6xl">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-5xl">
                 Why Partner With{" "}
                 <span className="bg-linear-to-r from-blue-600 to-blue-400 dark:from-blue-400 dark:to-cyan-400 bg-clip-text text-transparent">
-                  TradeScops
+                  TradeScopify
                 </span>
                 ?
               </h2>
@@ -340,7 +340,7 @@ export default function BrokerPartnership() {
             </h2>
             <p className="mt-5 text-gray-600 dark:text-gray-400 leading-relaxed">
               Join the leading brokers who have already partnered with
-              TradeScops. Let&apos;s grow together.
+              TradeScopify. Let&apos;s grow together.
             </p>
             <div className="mt-8">
               <Link

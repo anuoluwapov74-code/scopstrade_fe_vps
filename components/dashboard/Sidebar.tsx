@@ -128,7 +128,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
           <div className="flex items-center justify-between p-5 border-b border-gray-200 dark:border-white/10">
             <Link href="/portfolio" className="flex items-center gap-0">
               <span className="text-xl sm:text-2xl font-extrabold tracking-tight text-gray-900 dark:text-white">
-                Trade<span className="text-blue-600 dark:text-blue-500">Scops</span>
+                Trade<span className="text-blue-600 dark:text-blue-500">Scopify</span>
               </span>
             </Link>
 

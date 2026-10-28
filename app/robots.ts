@@ -27,6 +27,6 @@ export default function robots(): MetadataRoute.Robots {
         ],
       },
     ],
-    sitemap: "https://tradescops.com/sitemap.xml",
+    sitemap: "https://tradescopify.com/sitemap.xml",
   };
 }

@@ -114,7 +114,7 @@ export default function TopNav({ onMenuClick, user }: TopNavProps) {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-0">
             <span className="text-xl sm:text-2xl font-extrabold tracking-tight text-gray-900 dark:text-white">
-              Trade<span className="text-blue-600 dark:text-blue-500">Scops</span>
+              Trade<span className="text-blue-600 dark:text-blue-500">Scopify</span>
             </span>
           </Link>
 

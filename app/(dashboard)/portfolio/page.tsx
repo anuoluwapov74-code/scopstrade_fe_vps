@@ -264,7 +264,7 @@ export default function PortfolioPage() {
                     <div className="flex flex-col gap-1">
                       <span className="text-[15px] font-bold leading-none">
                         <span style={{ color: dk.darkText }}>Trade</span>
-                        <span style={{ color: dk.accentDark }}>Scops</span>
+                        <span style={{ color: dk.accentDark }}>Scopify</span>
                       </span>
                       {isVerified && (
                         <div

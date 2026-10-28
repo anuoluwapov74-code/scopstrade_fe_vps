@@ -19,10 +19,10 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://tradescops.com"),
+  metadataBase: new URL("https://tradescopify.com"),
   title: {
-    default: "TradeScops - Copy Futures, Options & Contracts with Precision",
-    template: "%s | TradeScops",
+    default: "TradeScopify - Copy Futures, Options & Contracts with Precision",
+    template: "%s | TradeScopify",
   },
   description:
     "Mirror real-time stock and options trades from top-performing traders. Precision, flexibility, and transparency straight to your fingertips.",
@@ -32,16 +32,16 @@ export const metadata: Metadata = {
     "options trading",
     "stock trading",
     "trade copying",
-    "TradeScops",
+    "TradeScopify",
   ],
   openGraph: {
     // Image is supplied automatically by app/opengraph-image.png (Next.js file
     // convention) — do not duplicate it here, file-based metadata takes
     // priority over this config and would just shadow it.
     type: "website",
-    url: "https://tradescops.com",
-    siteName: "TradeScops",
-    title: "TradeScops - Copy Futures, Options & Contracts with Precision",
+    url: "https://tradescopify.com",
+    siteName: "TradeScopify",
+    title: "TradeScopify - Copy Futures, Options & Contracts with Precision",
     description:
       "Mirror real-time stock and options trades from top-performing traders. Precision, flexibility, and transparency straight to your fingertips.",
   },
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     // Image is supplied automatically by app/twitter-image.png (Next.js file
     // convention) — same reasoning as openGraph above.
     card: "summary_large_image",
-    title: "TradeScops - Copy Futures, Options & Contracts with Precision",
+    title: "TradeScopify - Copy Futures, Options & Contracts with Precision",
     description:
       "Mirror real-time stock and options trades from top-performing traders. Precision, flexibility, and transparency straight to your fingertips.",
   },
