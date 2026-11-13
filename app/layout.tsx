@@ -3,7 +3,7 @@ import { Poppins, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "sonner";
-import Script from "next/script";
+import SmartsuppChat from "@/components/SmartsuppChat";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://tradescopify.com"),
   title: {
     default: "TradeScopify - Copy Futures, Options & Contracts with Precision",
-    template: "%s | TradeScopify",
+    template: "TradeScopify | %s",
   },
   description:
     "Mirror real-time stock and options trades from top-performing traders. Precision, flexibility, and transparency straight to your fingertips.",
@@ -89,12 +89,8 @@ export default function RootLayout({
           <Toaster richColors position="top-right" />
         </ThemeProvider>
 
-        {/* LiveChat - Jovo */}
-
-        <Script
-          src="//code.jivosite.com/widget/YnNvuXYSLh"
-          strategy="afterInteractive"
-        />
+        {/* LiveChat - Smartsupp */}
+        <SmartsuppChat project="TradeScopify" website="tradescopify.com" color="#3b82f6" />
       </body>
     </html>
   );
